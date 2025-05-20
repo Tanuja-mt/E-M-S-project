@@ -1,20 +1,18 @@
-import React , {useState}from 'react';
+import React , {createContext, useState}from 'react';
+const Login = ({handleLogin}) => {
 
-const Login = () => {
-
+// console.log(handleLogin)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const submitHandler =(e)=>{
         e.preventDefault()
-        console.log("email is ", email)
-        console.log("password is ", password)
+        handleLogin(email, password)
         setEmail("");
         setPassword("");
-
     }
   return (
     <>
-    <div className='flex item-center justify-center'>
+    <div className='flex h-full item-center justify-center bg-red-600'>
         <div className='border-2 border-emerald-600 rounded-xl'>
             <form onSubmit={(e)=>{
                 submitHandler(e)

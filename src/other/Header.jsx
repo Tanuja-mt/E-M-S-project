@@ -1,14 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { setLocalStorage } from '../utils/localStorage'
 
-const Header = () => {
+const Header = (props) => {
+  // const [userName, setUserName] = useState('')
+  // if(!data){
+  //   userName('Admin')
+
+  //   }else{
+  //     setUserName(data.firstName)
+  //   }
+  const logOutUser =()=>{
+   localStorage.setItem('loggedInUser','')
+   props.changeUser('')
+  //  window.location.reload()
+  }
   return (
-    <div className='flex item-end justify-between'> 
-        <h1 className='text-2xl font-semibold'>Hellow <br/>👋, <span className='text-3xl font-semibold'>Tanuja</span>
+    <header className='flex item-end justify-between'> 
+        <h1 className='text-2xl font-semibold text-white'>Hellow <br/>👋 <span className='text-3xl text-white font-semibold'>userName</span>
         </h1>
-        <button className='bg-red-500 py-2 px-3 font-medium text-lg text-white h-fit
+        <button onClick={logOutUser} className='bg-red-500 py-2 px-3 font-medium text-lg text-white h-fit
          font-semibold rounded-sm'>Log Out</button>
-    </div>
+    </header>
   )
 }
 
-export default Header
+export default Header;
