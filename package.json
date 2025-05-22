@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://github.com/Tanuja-mt/E-M-S-project"
+    "homepage": "https://your-username.github.io/your-repo-name"
   },
   "dependencies": {
     "axios": "^1.9.0",
