@@ -14,7 +14,7 @@ const [userData, setUserData] = useState(null)
   }, [])
 
   return (
-    <div>
+    <div className='h-full'>
       <AuthContext.Provider value={[userData,setUserData]}>
         {children}
       </AuthContext.Provider>
@@ -22,5 +22,5 @@ const [userData, setUserData] = useState(null)
   )
 }
 
-export default AuthProvider
+export default AuthProvider;
 
