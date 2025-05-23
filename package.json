@@ -1,9 +1,9 @@
 {
+  "homepage": "https://Tanuja-mt.github.io/E-M-S-project",
   "name": "ems",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Tanuja-mt.github.io/E-M-S-project",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
